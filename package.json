@@ -1,0 +1,25 @@
+{
+  "name": "kmt",
+  "version": "0.0.0",
+  "description": "KISSY Module Transform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kissyteam/kmt.git"
+  },
+  "keywords": [
+    "KISSY",
+    "Module",
+    "KISSY1.5",
+    "KISSY5.0"
+  ],
+  "author": "taojie.hjp@taobao.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kissyteam/kmt/issues"
+  },
+  "homepage": "https://github.com/kissyteam/kmt"
+}
