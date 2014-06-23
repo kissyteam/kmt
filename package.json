@@ -3,12 +3,24 @@
   "version": "0.0.0",
   "description": "KISSY Module Transform",
   "main": "index.js",
+  "bin": {
+      "kmt": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/kissyteam/kmt.git"
+  },
+  "dependencies": {
+      "colors": "0.6.2",
+      "commander": "^2.2.0",
+      "iconv-lite": "^0.4.3",
+      "mkdirp": "^0.5.0",
+      "uglify-js": "^2.4.13",
+      "underscore": "^1.6.0",
+      "walk": "^2.3.3"
   },
   "keywords": [
     "KISSY",
