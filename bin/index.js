@@ -16,10 +16,12 @@ program
     .option('-m, --minify', 'minify or not')
     .option('-o, --stdout', 'disbale stdout or not')
     .option('-k, --kv [value]','kissy version')
+    .option('--charset [value]','charset')
     .option('-t, --type [value]','code style type, cmd or kissy')
     .parse(process.argv);
 
 var options = {};
+
 
 if(!program.build || typeof program.build !== "string") {
 	buildPath = path.join(basePath, "../build");
@@ -30,8 +32,9 @@ if(!program.build || typeof program.build !== "string") {
 if(program.source && typeof program.source == "string") {
 	sourcePath = path.join(basePath,program.source);
 }
-//return console.log(program);
+
 parser.build({
+    charset:program.charset && program.charset == "gbk" ? "gbk" :"utf-8",
 	src: sourcePath,
 	dest: buildPath,
 	stdout: !program.stdout,
