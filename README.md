@@ -10,3 +10,5 @@ kmt -s ./kissy1.4_code -b ./kissy1.5_code --charset gbk
 -s kissy1.4代码目录   
 -b 转换后的kissy1.5代码目录   
 --charset 文件编码 默认utf-8   
+
+转换后的代码为commonJs风格代码，请使用gulp-kmc https://github.com/hustxiaoc/gulp-kmc 插件进行构建
