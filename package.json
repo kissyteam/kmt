@@ -1,6 +1,6 @@
 {
   "name": "kmt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "KISSY Module Transform",
   "main": "index.js",
   "bin": {
