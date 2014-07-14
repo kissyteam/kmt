@@ -1,14 +1,20 @@
-## kmt
+KMT
 ===
+> KISSY Module Transform
 
-## KISSY Module Transform
-kmt是一个将KISSY1.4版无缝升级到1.5的小工具，致力于不改一行代码就能够完美的完成KISSY升级
+KMT是一个将KISSY 1.4版无缝升级到KISSY 5.0的工具，无需人工改写代码就能够平滑的完成KISSY升级。
 
-## 使用帮助
+### 使用帮助
+
+```
 kmt -s ./kissy1.4_code -b ./kissy1.5_code --charset gbk
+```
+* -s kissy1.4代码目录   
+* -b 转换后的kissy1.5代码目录   
+* --charset 文件编码 默认utf-8   
 
--s kissy1.4代码目录   
--b 转换后的kissy1.5代码目录   
---charset 文件编码 默认utf-8   
+转换后的代码为CommonJS Module风格
 
-转换后的代码为commonJs风格代码，请使用gulp-kmc https://github.com/hustxiaoc/gulp-kmc 插件进行构建
+### 集成插件
+
+* [gulp-kmc](https://github.com/hustxiaoc/gulp-kmc)
