@@ -6,6 +6,7 @@ KMT是一个将KISSY 1.4版无缝升级到KISSY 5.0的工具，无需人工改�
 
 ### 使用帮助
 
+#### build
 ```
 kmt -s ./kissy1.4_code -b ./kissy5.0_code --charset gbk
 ```
