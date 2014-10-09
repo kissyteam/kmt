@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var path = require("path"),
-	parser = require('../lib/kmt');
+    api = require('../build');
 
 var basePath = process.cwd(),
 	sourcePath = basePath,
@@ -13,14 +13,10 @@ program
     .version(pkg.version)
     .option('-b, --build [value]', 'build path')
     .option('-s, --source [value]', 'source path')
-    .option('-m, --minify', 'minify or not')
     .option('-o, --stdout', 'disbale stdout or not')
-    .option('-k, --kv [value]','kissy version')
     .option('--charset [value]','charset')
-    .option('-t, --type [value]','code style type, cmd or kissy')
+    .option('-t, --type [value]','code style type, cmd or kissy or modulex')
     .parse(process.argv);
-
-var options = {};
 
 
 if(!program.build || typeof program.build !== "string") {
@@ -33,12 +29,19 @@ if(program.source && typeof program.source == "string") {
 	sourcePath = path.join(basePath,program.source);
 }
 
-parser.build({
+var options = {
     charset:program.charset && program.charset == "gbk" ? "gbk" :"utf-8",
-	src: sourcePath,
-	dest: buildPath,
-	stdout: !program.stdout,
-	minify: program.minify,
-	style:program.type,
-	v:program.kv
-});
+	debug: !program.stdout
+}
+
+if(program.type == 'cmd') {
+    options.commonJs = true;
+}else if(program.type == 'kissy') {
+    options.modulex = false;
+    options.commonJs = false;
+}else if(program.type == 'modulex') {
+    options.modulex = true;
+    options.commonJs = false;
+}
+console.log(options);
+api.buildDir(sourcePath, buildPath, options);
