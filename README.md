@@ -6,14 +6,19 @@ KMT是一个将KISSY 1.4版无缝升级到KISSY 5.0的工具，无需人工改�
 
 ### 使用帮助
 
+#### install
+npm install -g kmt
+
+#### build
 ```
-kmt -s ./kissy1.4_code -b ./kissy1.5_code --charset gbk
+kmt -s ./kissy1.4_code -b ./kissy5.0_code --charset gbk
 ```
 * -s kissy1.4代码目录   
-* -b 转换后的kissy1.5代码目录   
+* -b 转换后的kissy5.0代码目录   
 * --charset 文件编码 默认utf-8   
 
-转换后的代码为CommonJS Module风格
+#### diff文件
+build下会自动生成一个diff的文件夹，存放build前与build之后的文件差异
 
 ### 集成插件
 
