@@ -11,10 +11,11 @@ npm install -g kmt
 
 #### build
 ```
-kmt -s ./kissy1.4_code -b ./kissy5.0_code --charset gbk
+kmt -s ./kissy1.4_code -b ./kissy5.0_code -t kissy --charset gbk  
 ```
 * -s kissy1.4代码目录   
 * -b 转换后的kissy5.0代码目录   
+* -t 转换后的代码风格  commonJs(默认，推荐), kissy, modulex, define
 * --charset 文件编码 默认utf-8   
 
 #### diff文件
